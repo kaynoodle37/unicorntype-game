@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnicornType - Simple Typing Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>UnicornType</h1>
+            <p>Simple typing practice to improve your speed and accuracy</p>
+        </header>
+
+        <div class="timer-container">
+            <div class="timer-circle">
+                <svg class="timer-svg" viewBox="0 0 100 100">
+                    <circle class="timer-background" cx="50" cy="50" r="45"></circle>
+                    <circle class="timer-progress" cx="50" cy="50" r="45" id="timerProgress"></circle>
+                </svg>
+                <div class="timer-text" id="timer">30s</div>
+            </div>
+        </div>
+
+        <div class="text-display" id="textDisplay">
+            <!-- Text to type will be displayed here -->
+        </div>
+
+        <div class="input-container">
+            <input type="text" id="textInput" placeholder="Click here and start typing..." autocomplete="off" spellcheck="false">
+        </div>
+
+        <div class="controls">
+            <button id="resetBtn" onclick="resetTest()">New Text</button>
+            <button id="restartBtn" onclick="restartTest()">Restart</button>
+        </div>
+
+        <div class="results" id="results" style="display: none;">
+            <h3>Test Complete!</h3>
+            <div class="final-stats">
+                <div class="final-stat">
+                    <strong>Final WPM:</strong> <span id="finalWpm">0</span>
+                </div>
+                <div class="final-stat">
+                    <strong>Final Accuracy:</strong> <span id="finalAccuracy">100%</span>
+                </div>
+                <div class="final-stat">
+                    <strong>Highest WPM:</strong> <span id="highestWpm">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
